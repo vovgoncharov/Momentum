@@ -3,7 +3,7 @@ const next = document.querySelector(".play-next");
 const prev = document.querySelector(".play-prev");
 const playList = document.querySelector(".play-list");
 const list = document.querySelector(".list");
-const audio = document.querySelector(".player-control");
+const audio = new Audio();
 const source = document.querySelector(".source");
 const musics = [
     "Aqua Caelestis",
@@ -11,6 +11,7 @@ const musics = [
     "River Flows In You",
     "Summer Wind",
 ];
+
 export const playMusic = () => {
     let zero = 0;
     play.addEventListener("click", (e) => {
@@ -21,7 +22,8 @@ export const playMusic = () => {
             list.classList.remove("display");
         } else {
             list.classList.add("display");
-            source.src = `../assets/sounds/${musics[zero]}.mp3`;
+            audio.src = `../assets/sounds/${musics[zero]}.mp3`;
+            audio.currentTime = 0;
             audio.play();
             playList.innerHTML = `${musics[zero]}`;
             play.classList.add("pause");
