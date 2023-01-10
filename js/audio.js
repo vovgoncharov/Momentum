@@ -21,7 +21,7 @@ export const playMusic = () => {
             list.classList.remove("display");
         } else {
             list.classList.add("display");
-            source.src = `assets/sounds/${musics[zero]}.mp3`;
+            source.src = `../assets/sounds/${musics[zero]}.mp3`;
             audio.play();
             playList.innerHTML = `${musics[zero]}`;
             play.classList.add("pause");
@@ -32,7 +32,7 @@ export const playMusic = () => {
         list.classList.add("display");
         if (zero <= musics.length - 2) {
             zero += 1;
-            audio.src = `assets/sounds/${musics[zero]}.mp3`;
+            audio.src = `../assets/sounds/${musics[zero]}.mp3`;
             audio.play();
             playList.innerHTML = `${musics[zero]}`;
             play.classList.add("pause");
@@ -43,7 +43,7 @@ export const playMusic = () => {
         list.classList.add("display");
         if (zero > 0) {
             zero -= 1;
-            audio.src = `assets/sounds/${musics[zero]}.mp3`;
+            audio.src = `../assets/sounds/${musics[zero]}.mp3`;
             audio.play();
             playList.innerHTML = `${musics[zero]}`;
             play.classList.add("pause");
