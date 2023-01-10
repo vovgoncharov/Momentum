@@ -20,7 +20,10 @@ body {
     background-blend-mode: multiply;
     transition: background-image 1s ease-in-out;
 }
-
+.player-control {
+    background: rgb(36, 23, 156);
+    color: rgb(36, 23, 156);
+}
 .header {
     display: flex;
     justify-content: space-between;
@@ -41,10 +44,13 @@ body {
 
 .play-list {
     text-align: left;
+    position: relative;
+    margin-left: 20px;
+}
+.play-list-add {
     animation-name: identifier;
     animation-iteration-count: infinite;
     animation-duration: 7s;
-    position: relative;
 }
 .play-list::before {
     content: "";
@@ -59,6 +65,7 @@ body {
     background-repeat: no-repeat;
     background-position: center center;
 }
+
 .list {
     display: flex;
     flex-wrap: wrap-reverse;
