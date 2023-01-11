@@ -1,7 +1,13 @@
-"use strict";
-import { getData } from "./date.js";
-import { getGreet } from "./greeting.js";
-import { nextSlide, prevSlide } from "./slider.js";
-import { getWeather } from "./weather.js";
-import { playMusic } from "./audio.js";
-import { getQuote } from "./quotes.js";
+import { initDate } from './date.js';
+import { initGreeting } from './greeting.js';
+import { initSlider } from './slider.js';
+import { initWeather } from './weather.js';
+import { initMusic } from './audio.js';
+import { getQuote } from './quotes.js';
+
+initDate();
+initGreeting();
+initSlider();
+initWeather();
+initMusic();
+getQuote();
