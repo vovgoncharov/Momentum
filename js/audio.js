@@ -20,6 +20,7 @@ export const playMusic = () => {
             playList.innerHTML = `${musics[zero]}`;
             play.classList.remove("pause");
             list.classList.remove("display");
+            playList.classList.remove("play-list-add");
         } else {
             list.classList.add("display");
             audio.src = `../assets/sounds/${musics[zero]}.mp3`;
@@ -27,6 +28,7 @@ export const playMusic = () => {
             audio.play();
             playList.innerHTML = `${musics[zero]}`;
             play.classList.add("pause");
+            playList.classList.add("play-list-add");
         }
     });
 
@@ -38,6 +40,7 @@ export const playMusic = () => {
             audio.play();
             playList.innerHTML = `${musics[zero]}`;
             play.classList.add("pause");
+            playList.classList.add("play-list-add");
         }
     });
 
@@ -49,6 +52,7 @@ export const playMusic = () => {
             audio.play();
             playList.innerHTML = `${musics[zero]}`;
             play.classList.add("pause");
+            playList.classList.add("play-list-add");
         }
     });
 };

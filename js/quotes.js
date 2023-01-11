@@ -12,11 +12,10 @@ export const getQuote = () => {
         e.preventDefault();
         let number = Math.random() * 2;
         let numberIndex = Math.round(number);
-        console.log(numberIndex);
+
         data.forEach(() => {
             quote.textContent = `${data[numberIndex].text}`;
             author.textContent = `${data[numberIndex].author}`;
-            console.log(numberIndex);
         });
     });
 };
