@@ -1,46 +1,14 @@
-const date = document.querySelector(".date");
-const time = document.querySelector(".time");
-const days = [
-    "Sunday",
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
-    "Saturday",
-];
-const months = [
-    "January",
-    "February",
-    "March",
-    "April",
-    "May",
-    "June",
-    "July",
-    "August",
-    "September",
-    "November",
-    "December",
-];
-export const getData = () => {
-    let data = new Date();
-    let hours = data.getHours();
-    let min = data.getMinutes();
-    let seconds = data.getSeconds();
-    let today = data.getDay();
-    let dates = data.getDate();
-    let month = data.getMonth();
-    // console.log(today)
-    date.innerHTML = `${days[today]}, ${months[month]} ${dates}`;
-    if (hours < 10) {
-        hours = `0${hours}`;
+export const data =[
+    {
+      "text": "Пишите код так, как будто сопровождать его будет склонный к насилию психопат, который знает, где вы живете",
+      "author": "Стив Макконнелл"
+    },
+    {
+      "text": "Сложность программы растет до тех пор, пока не превысит способности программиста",
+      "author": "Артур Блох. Законы Мэрфи"
+    },
+      {
+      "text": "Ходить по воде и разрабатывать программы, следуя ТЗ, очень просто… если они заморожены",
+      "author": "И. Берард"
     }
-    if (min < 10) {
-        min = `0${min}`;
-    }
-    if (seconds < 10) {
-        seconds = `0${seconds}`;
-    }
-    time.innerHTML = `${hours}:${min}:${seconds}`;
-};
-setInterval(getData, 1000);
+  ]  

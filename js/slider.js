@@ -24,7 +24,7 @@ let number;
 const getRandom = () => {
     let randomNumber = Math.random() * 20;
     if (randomNumber < 1) {
-        number = `01`
+        number = `01`;
     } else if (randomNumber < 9.5) {
         number = Math.round(randomNumber);
         number = `0${number}`;
@@ -51,11 +51,13 @@ const getSlidePrev = () => {
     };
 };
 
+
 export const nextSlide = () => {
     next.addEventListener("click", getSlideNext);
 };
 export const prevSlide = () => {
     prev.addEventListener("click", getSlidePrev);
 };
+
 prevSlide();
 nextSlide();
